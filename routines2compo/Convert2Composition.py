@@ -176,17 +176,17 @@ def convertPheno(jsonint:json,ff:bool)->json:
 def convertFamily(jsonint:json,ff:bool)->json:
     jf={}
     #id
-    jf['id']=[convertId(jf['id'],ff)]
+    jf['id']=[convertId(jsonint['id'],ff)]
     #proband
     jf['proband']=[convertPheno(jsonint['proband'],ff)]
     #relatives
     if 'relatives' in jsonint:
         relatives=[]
         for rel in jsonint['relatives']:
-            relatives.append(convertPheno(rel),ff)
+            relatives.append(convertPheno(rel,ff))
         jf['relative']=relatives
     #pedigree
-    jf['pedigree']=convertPedigree(jsonint['pedigree'],ff)
+    jf['pedigree']=[convertPedigree(jsonint['pedigree'],ff)]
     #hts_files
     if 'htsFiles' in jsonint:
         jf['htsfile']=convertHtsFiles(jsonint['htsFiles'],ff)
