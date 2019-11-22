@@ -14,6 +14,9 @@ from interpretation_pb2 import Interpretation
 from phenopackets_pb2 import Phenopacket,Family,Cohort
 
 def convert2composition(filename:str,outputfile:str)->json:
+    #ff=parameter to toggle insertion of info not coming from the phenopacket
+    #useful to make easier the final comparison between the result and the target
+    ff=True
     with open(filename,'r') as f:
         jsonp = json.load(f)
         #check needed files existance
@@ -33,8 +36,8 @@ def convert2composition(filename:str,outputfile:str)->json:
             sys.exit(1)
         #parsing
         if 'resolutionStatus' in jsonp: #interpretation
-            print("It's an Interpretation")
-            logging.info("It's an Interpretation")
+            print(f"{filename} is an Interpretation")
+            logging.info(f"{filename} is an Interpretation")
             #check if it's a legit phenopacket
             try:
                 readmessage(filename,Interpretation())
@@ -42,11 +45,11 @@ def convert2composition(filename:str,outputfile:str)->json:
                 print (f'file {filename} unrecognized as Interpretation phenopacket')
                 logging.error(f'file {filename} unrecognized as Interpretation phenopacket')
                 sys.exit(1)
-            myjson=convert2interpretationreport(jsonp,filectxinfo,filecontext)
+            myjson=convert2interpretationreport(jsonp,filectxinfo,filecontext,ff)
 
         elif 'members' in jsonp: #cohort
-            print("It's a Cohort")
-            logging.info("It's a Cohort")
+            print(f"{filename} is a Cohort")
+            logging.info("{filename} is a Cohort")
             #check if it's a legit phenopacket
             try:
                 readmessage(filename,Cohort())
@@ -54,13 +57,12 @@ def convert2composition(filename:str,outputfile:str)->json:
                 print (f'file {filename} unrecognized as Cohort phenopacket')
                 logging.error(f'file {filename} unrecognized as Cohort phenopacket')
                 sys.exit(1)
-            myjson=convert2cohortreport(jsonp,filectxinfo,filecontext)
+            myjson=convert2cohortreport(jsonp,filectxinfo,filecontext,ff)
         with open(outputfile,'w') as g:
             json.dump(myjson,g,sort_keys=True,indent=4)
         return myjson
 
-def convert2interpretationreport(jsonint:json,filectxinfo:str,filecontext:str)->json:
-    ff=True #fillingflag. for debugging
+def convert2interpretationreport(jsonint:json,filectxinfo:str,filecontext:str,ff:bool)->json:
     myjson={}
     myjson.update(insertctx(filectxinfo))
     interpretation_report={}
@@ -98,7 +100,7 @@ def convertId(idf:str,ff:bool)->json:
         iddata['|type']='Prescription'
     return iddata
 
-def convert2cohortreport(jsoncoh:json,filectxinfo:str,filecontext:str)->json:
+def convert2cohortreport(jsoncoh:json,filectxinfo:str,filecontext:str,ff:bool)->json:
     myjson={}
     myjson.update(insertctx(filectxinfo))
     cohort_report={}
@@ -123,7 +125,8 @@ def convert2cohortreport(jsoncoh:json,filectxinfo:str,filecontext:str)->json:
 def convertMembers(jsonmember:list,ff:bool)->list:
     mems=[]
     for mem in jsonmember:
-        mems.append(convertPheno(mem),ff)
+        mems.append(convertPheno(mem,ff))
+    return mems
 
 def insertctx(filectxinfo:str)->json:
     with open(filectxinfo,'r') as f:
@@ -171,6 +174,9 @@ def convertPheno(jsonint:json,ff:bool)->json:
     #metadata
     if 'metaData' in jsonint:
         jp['metadata']=[convertMeta(jsonint['metaData'],ff)]
+        #workaround to buggy phenopacket(member) in cohort that has a void metadata
+        if len(list(jp['metadata'][0].keys()))==0:
+            del jp['metadata']
     return jp
 
 def convertFamily(jsonint:json,ff:bool)->json:
@@ -197,6 +203,9 @@ def convertFamily(jsonint:json,ff:bool)->json:
 
 
 def convertMeta(jsonmeta:json,ff:bool)->json:
+    #workaround to buggy phenopacket(member) in cohort that has a void metadata
+    if len(list(jsonmeta.keys()))==0:
+        return {}
     metadata={}
     #created
     metadata['created']=[jsonmeta['created']]

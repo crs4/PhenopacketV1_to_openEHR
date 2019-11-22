@@ -85,13 +85,15 @@ def main():
             #convert to phenopacket and serialize on file the result
             if check:
                 targetfile=filename[:-4]+'target'
-                file=pathlib.Path(targetfile)
-                if file.exists():
+                filec=pathlib.Path(targetfile)
+                if filec.exists():
+                    logging.info(f'checking json from file {outputfile} (obtained from {filename})\n against {targetfile}')
                     check_composition(jsonconverted,targetfile)
                 else:
                     print ('A .target file is needed if check flag is on')
                     logging.error('A target is needed when the check flag has been set to true. It must \
                         have the same name as the input file but extension .target')
+            logging.debug(f'complete json for {outputfile}')
             logging.debug(json.dumps(jsonconverted,sort_keys=True,indent=4))
 
 
