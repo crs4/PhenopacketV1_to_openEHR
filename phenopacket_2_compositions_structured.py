@@ -40,6 +40,7 @@ def main():
         inputfile=args.pathfile
 
     print(f'inputfile is {inputfile}')
+    check=False
 #    print (args.check)
     if args.check:
         check=True
