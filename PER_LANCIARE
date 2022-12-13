@@ -1,4 +1,3 @@
-export PYTHONPATH=/usr/local/data/WORK/OPENEHR/PHENOPACKET/TEST_PHENOPACKET_FROM_JSON
-source /usr/local/data/WORK/myvenv/bin/activate
+export PYTHONPATH='PATH to where the protobuf phenopacket files are located:base_pb2.py, interpretation_pb2.py, phenopackets_pb2.py
 python phenopacket_2_compositions_structured.py --loglevel=DEBUG --check
 
