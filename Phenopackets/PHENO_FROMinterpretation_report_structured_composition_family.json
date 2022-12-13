@@ -1,0 +1,578 @@
+{
+  "id": "e4501749-6fb4-4839-b5c6-ed18704c01d9",
+  "resolutionStatus": "IN_PROGRESS",
+  "family": {
+    "id": "d2115117-2fe3-4cac-bc67-32cfbac97206",
+    "proband": {
+      "id": "dfb20e4f-9952-4959-a015-2fa1dcfff8cc",
+      "subject": {
+        "id": "subject 93"
+      },
+      "phenotypicFeatures": [
+        {
+          "description": "description 76",
+          "type": {
+            "id": "external_terminology:C.30",
+            "label": "C.30 description"
+          },
+          "severity": {
+            "id": "external_terminology:S.63",
+            "label": "S.63 description"
+          },
+          "modifiers": [
+            {
+              "id": "external_terminology:T.0",
+              "label": "T.0 description"
+            }
+          ],
+          "classOfOnset": {
+            "id": "external_terminology:E.99",
+            "label": "E.99 description"
+          },
+          "evidence": [
+            {
+              "evidenceCode": {
+                "id": "external_terminology:A.84",
+                "label": "A.84 description"
+              },
+              "reference": {
+                "id": "830e5d35-9068-4408-bc16-d8cbe430c556",
+                "description": "description 37"
+              }
+            }
+          ]
+        }
+      ],
+      "biosamples": [
+        {
+          "id": "4b91aaf6-b32c-4582-8ed6-94a5f3b79428",
+          "individualId": "d91a45c0-8507-4291-a204-1e674d8879e9",
+          "description": "description 85",
+          "sampledTissue": {
+            "id": "external_terminology:V.18",
+            "label": "V.18 description"
+          },
+          "taxonomy": {
+            "id": "external_terminology:S.67",
+            "label": "S.67 description"
+          },
+          "ageOfIndividualAtCollection": {
+            "age": "P2DT8H31M"
+          },
+          "histologicalDiagnosis": {
+            "id": "external_terminology:E.17",
+            "label": "E.17 description"
+          },
+          "tumorProgression": {
+            "id": "external_terminology:V.82",
+            "label": "V.82 description"
+          },
+          "tumorGrade": {
+            "id": "external_terminology:N.31",
+            "label": "N.31 description"
+          },
+          "diagnosticMarkers": [
+            {
+              "id": "external_terminology:A.0",
+              "label": "A.0 description"
+            }
+          ],
+          "procedure": {
+            "code": {
+              "id": "external_terminology:I.6",
+              "label": "I.6 description"
+            },
+            "bodySite": {
+              "id": "external_terminology:N.32",
+              "label": "N.32 description"
+            }
+          }
+        }
+      ],
+      "genes": [
+        {
+          "id": "external_terminology:D.54",
+          "symbol": "D.54 description"
+        }
+      ],
+      "variants": [
+        {
+          "hgvsAllele": {
+            "id": "03ceac3b-633e-463e-b0d9-3142f0539f5f",
+            "hgvs": "hgvs 72"
+          },
+          "zygosity": {
+            "id": "external_terminology:I.41",
+            "label": "I.41 description"
+          }
+        },
+        {
+          "vcfAllele": {
+            "genomeAssembly": "genome_assembly 22",
+            "id": "e5d28e25-7d7b-4408-8350-c13ea17cbda2",
+            "chr": "chr 60",
+            "pos": 2,
+            "ref": "re 9",
+            "alt": "alt 47",
+            "info": "info 82"
+          },
+          "zygosity": {
+            "id": "external_terminology:I.41",
+            "label": "I.41 description"
+          }
+        },
+        {
+          "spdiAllele": {
+            "id": "8dc9ca6f-2902-4899-a042-c6f1e4d609a8",
+            "seqId": "04f1d27e-fe9b-46f9-981f-0f046e1a52ef",
+            "position": 3,
+            "deletedSequence": "deleted_sequence 67",
+            "insertedSequence": "inserted_sequence 65"
+          },
+          "zygosity": {
+            "id": "external_terminology:I.41",
+            "label": "I.41 description"
+          }
+        },
+        {
+          "iscnAllele": {
+            "id": "84861f71-5434-460c-ad14-85601133207c",
+            "iscn": "iscn 32"
+          },
+          "zygosity": {
+            "id": "external_terminology:I.41",
+            "label": "I.41 description"
+          }
+        }
+      ],
+      "diseases": [
+        {
+          "term": {
+            "id": "external_terminology:S.6",
+            "label": "S.6 description"
+          },
+          "ageOfOnset": {
+            "age": "P2Y1M1D"
+          },
+          "tumorStage": [
+            {
+              "id": "external_terminology:T.90",
+              "label": "T.90 description"
+            }
+          ]
+        }
+      ],
+      "htsFiles": [
+        {
+          "uri": "http://example.com/path/resource",
+          "description": "description 16",
+          "htsFormat": "VCF",
+          "genomeAssembly": "genome_assembly 3",
+          "individualToSampleIdentifiers": {
+            "43b9fbe2-e878-46cb-acd1-942fbc66d984": "a3d78654-7d12-472d-9941-1d673790dd99"
+          }
+        }
+      ],
+      "metaData": {
+        "created": "2019-10-10T08:23:03.758Z",
+        "createdBy": "created by 11",
+        "submittedBy": "submitted by 90",
+        "resources": [
+          {
+            "id": "4c17caf7-09ea-4854-9bde-e9fc9fa01ee0",
+            "name": "name 65",
+            "url": "http://example.com/path/resource",
+            "version": "version 23",
+            "namespacePrefix": "namespace_prefix 34",
+            "iriPrefix": "iri-prefix 24"
+          }
+        ],
+        "updates": [
+          {
+            "timestamp": "2019-10-10T08:23:03.758Z",
+            "updatedBy": "updated_by 41",
+            "comment": "comment 43"
+          }
+        ],
+        "phenopacketSchemaVersion": "phenopacket_schema_version 56",
+        "externalReferences": [
+          {
+            "id": "5620043b-0c30-41ae-88d1-ccc8b3af7cdd",
+            "description": "description 7"
+          }
+        ]
+      }
+    },
+    "relatives": [
+      {
+        "id": "585b6e04-19cd-47cf-a36c-23fa2b790de1",
+        "subject": {
+          "id": "subject 77"
+        },
+        "phenotypicFeatures": [
+          {
+            "description": "description 96",
+            "type": {
+              "id": "external_terminology:I.47",
+              "label": "I.47 description"
+            },
+            "severity": {
+              "id": "external_terminology:T.19",
+              "label": "T.19 description"
+            },
+            "modifiers": [
+              {
+                "id": "external_terminology:I.5",
+                "label": "I.5 description"
+              }
+            ],
+            "classOfOnset": {
+              "id": "external_terminology:E.55",
+              "label": "E.55 description"
+            },
+            "evidence": [
+              {
+                "evidenceCode": {
+                  "id": "external_terminology:I.55",
+                  "label": "I.55 description"
+                },
+                "reference": {
+                  "id": "9e9ef7e8-3a21-4d37-9c73-2496beff5822",
+                  "description": "description 58"
+                }
+              }
+            ]
+          }
+        ],
+        "biosamples": [
+          {
+            "id": "2838e30b-1f11-426f-b068-c8948cc93919",
+            "individualId": "241322b7-e8f1-4494-b591-5138fbc6b2fd",
+            "description": "description 36",
+            "sampledTissue": {
+              "id": "external_terminology:F.36",
+              "label": "F.36 description"
+            },
+            "taxonomy": {
+              "id": "external_terminology:T.99",
+              "label": "T.99 description"
+            },
+            "ageOfIndividualAtCollection": {
+              "age": "P3DT10H23M"
+            },
+            "histologicalDiagnosis": {
+              "id": "external_terminology:T.82",
+              "label": "T.82 description"
+            },
+            "tumorProgression": {
+              "id": "external_terminology:N.20",
+              "label": "N.20 description"
+            },
+            "tumorGrade": {
+              "id": "external_terminology:D.33",
+              "label": "D.33 description"
+            },
+            "diagnosticMarkers": [
+              {
+                "id": "external_terminology:N.40",
+                "label": "N.40 description"
+              }
+            ],
+            "procedure": {
+              "code": {
+                "id": "external_terminology:T.5",
+                "label": "T.5 description"
+              },
+              "bodySite": {
+                "id": "external_terminology:T.38",
+                "label": "T.38 description"
+              }
+            }
+          }
+        ],
+        "genes": [
+          {
+            "id": "external_terminology:E.52",
+            "symbol": "E.52 description"
+          }
+        ],
+        "variants": [
+          {
+            "hgvsAllele": {
+              "id": "ede7b822-1cca-4820-8985-812165b8d56e",
+              "hgvs": "hgvs 53"
+            },
+            "zygosity": {
+              "id": "external_terminology:T.40",
+              "label": "T.40 description"
+            }
+          },
+          {
+            "vcfAllele": {
+              "genomeAssembly": "genome_assembly 16",
+              "id": "ddd4d86c-ad17-4662-97f2-e31ea48ee630",
+              "chr": "chr 73",
+              "pos": 7,
+              "ref": "re 80",
+              "alt": "alt 57",
+              "info": "info 53"
+            },
+            "zygosity": {
+              "id": "external_terminology:T.40",
+              "label": "T.40 description"
+            }
+          },
+          {
+            "spdiAllele": {
+              "id": "b5da399c-0a23-4be6-8591-616237aecc02",
+              "seqId": "b3a6cbf5-1c54-4f1c-bae7-5330e4a9356a",
+              "position": 10,
+              "deletedSequence": "deleted_sequence 50",
+              "insertedSequence": "inserted_sequence 59"
+            },
+            "zygosity": {
+              "id": "external_terminology:T.40",
+              "label": "T.40 description"
+            }
+          },
+          {
+            "iscnAllele": {
+              "id": "1c7034f3-4d57-4e42-84f6-8a7228afd93a",
+              "iscn": "iscn 91"
+            },
+            "zygosity": {
+              "id": "external_terminology:T.40",
+              "label": "T.40 description"
+            }
+          }
+        ],
+        "diseases": [
+          {
+            "term": {
+              "id": "external_terminology:N.22",
+              "label": "N.22 description"
+            },
+            "ageOfOnset": {
+              "age": "P3Y3M2D"
+            },
+            "tumorStage": [
+              {
+                "id": "external_terminology:D.27",
+                "label": "D.27 description"
+              }
+            ]
+          }
+        ],
+        "htsFiles": [
+          {
+            "uri": "http://example.com/path/resource",
+            "description": "description 4",
+            "htsFormat": "VCF",
+            "genomeAssembly": "genome_assembly 42",
+            "individualToSampleIdentifiers": {
+              "03c7f142-4f84-48aa-89b3-60d2033b75df": "8c17066d-ba3e-4975-a798-d3c65378ed94"
+            }
+          }
+        ],
+        "metaData": {
+          "created": "2019-10-10T08:23:03.757Z",
+          "createdBy": "created by 16",
+          "submittedBy": "submitted by 18",
+          "resources": [
+            {
+              "id": "fa69a579-a26b-4f23-b3f0-578e68e07a5e",
+              "name": "name 93",
+              "url": "http://example.com/path/resource",
+              "version": "version 32",
+              "namespacePrefix": "namespace_prefix 71",
+              "iriPrefix": "iri-prefix 72"
+            }
+          ],
+          "updates": [
+            {
+              "timestamp": "2019-10-10T08:23:03.757Z",
+              "updatedBy": "updated_by 51",
+              "comment": "comment 11"
+            }
+          ],
+          "phenopacketSchemaVersion": "phenopacket_schema_version 94",
+          "externalReferences": [
+            {
+              "id": "1adccb2a-a1da-4aa8-9a52-b8b8d571fe73",
+              "description": "description 10"
+            }
+          ]
+        }
+      }
+    ],
+    "pedigree": {
+      "persons": [
+        {
+          "familyId": "f68555ea-c12b-4eaa-a17b-4b69bd72ac6e",
+          "individualId": "ed93dbd8-66a0-4626-8778-b185336c095c",
+          "paternalId": "0a8dbf28-2209-4a8f-94a7-728d1036e1e4",
+          "maternalId": "e4365c09-e775-4c53-b8b4-12abc492a80f",
+          "sex": "OTHER_SEX",
+          "affectedStatus": "AFFECTED"
+        }
+      ]
+    },
+    "htsFiles": [
+      {
+        "uri": "http://example.com/path/resource",
+        "description": "description 50",
+        "htsFormat": "VCF",
+        "genomeAssembly": "genome_assembly 88",
+        "individualToSampleIdentifiers": {
+          "e0ac2354-5095-4d54-a890-5ba39b0770a9": "9bdb7699-8d27-48ee-8b48-51d8cdb0cd9e"
+        }
+      }
+    ],
+    "metaData": {
+      "created": "2019-10-10T08:23:03.759Z",
+      "createdBy": "created by 61",
+      "submittedBy": "submitted by 2",
+      "resources": [
+        {
+          "id": "85dbf49e-5bad-46b3-9345-a184782ae21c",
+          "name": "name 43",
+          "url": "http://example.com/path/resource",
+          "version": "version 22",
+          "namespacePrefix": "namespace_prefix 25",
+          "iriPrefix": "iri-prefix 83"
+        }
+      ],
+      "updates": [
+        {
+          "timestamp": "2019-10-10T08:23:03.759Z",
+          "updatedBy": "updated_by 43",
+          "comment": "comment 3"
+        }
+      ],
+      "phenopacketSchemaVersion": "phenopacket_schema_version 35",
+      "externalReferences": [
+        {
+          "id": "583ab0b4-8bf3-49bd-bf63-e6d677bdea74",
+          "description": "description 62"
+        }
+      ]
+    }
+  },
+  "diagnosis": [
+    {
+      "disease": {
+        "term": {
+          "id": "external_terminology:A.98",
+          "label": "A.98 description"
+        },
+        "ageOfOnset": {
+          "age": "P1M3D"
+        },
+        "tumorStage": [
+          {
+            "id": "external_terminology:T.5",
+            "label": "T.5 description"
+          }
+        ]
+      },
+      "genomicInterpretations": [
+        {
+          "status": "CAUSATIVE",
+          "gene": {
+            "id": "external_terminology:T.74",
+            "symbol": "T.74 description"
+          }
+        },
+        {
+          "status": "CAUSATIVE",
+          "variant": {
+            "hgvsAllele": {
+              "id": "99d1dad4-c812-4b88-a504-1020b925235c",
+              "hgvs": "hgvs 54"
+            },
+            "zygosity": {
+              "id": "external_terminology:D.89",
+              "label": "D.89 description"
+            }
+          }
+        },
+        {
+          "status": "CAUSATIVE",
+          "variant": {
+            "vcfAllele": {
+              "genomeAssembly": "genome_assembly 14",
+              "id": "c2a070ab-9acf-4c65-9573-c5168713286d",
+              "chr": "chr 99",
+              "pos": 6,
+              "ref": "re 31",
+              "alt": "alt 43",
+              "info": "info 5"
+            },
+            "zygosity": {
+              "id": "external_terminology:D.89",
+              "label": "D.89 description"
+            }
+          }
+        },
+        {
+          "status": "CAUSATIVE",
+          "variant": {
+            "spdiAllele": {
+              "id": "dcdc658f-6166-4d9b-aa7b-ff37ece5547b",
+              "seqId": "6b7362d9-a5bf-412f-abca-dd660a4f50bf",
+              "position": 5,
+              "deletedSequence": "deleted_sequence 5",
+              "insertedSequence": "inserted_sequence 93"
+            },
+            "zygosity": {
+              "id": "external_terminology:D.89",
+              "label": "D.89 description"
+            }
+          }
+        },
+        {
+          "status": "CAUSATIVE",
+          "variant": {
+            "iscnAllele": {
+              "id": "3bd783d5-b0dd-4c21-b718-3d0427314f70",
+              "iscn": "iscn 42"
+            },
+            "zygosity": {
+              "id": "external_terminology:D.89",
+              "label": "D.89 description"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "metaData": {
+    "created": "2019-10-10T08:23:03.759Z",
+    "createdBy": "created by 24",
+    "submittedBy": "submitted by 73",
+    "resources": [
+      {
+        "id": "599d01c5-ca39-4c4a-8369-ac3759770a51",
+        "name": "name 1",
+        "url": "http://example.com/path/resource",
+        "version": "version 94",
+        "namespacePrefix": "namespace_prefix 70",
+        "iriPrefix": "iri-prefix 30"
+      }
+    ],
+    "updates": [
+      {
+        "timestamp": "2019-10-10T08:23:03.759Z",
+        "updatedBy": "updated_by 3",
+        "comment": "comment 1"
+      }
+    ],
+    "phenopacketSchemaVersion": "phenopacket_schema_version 75",
+    "externalReferences": [
+      {
+        "id": "0d177906-fbd9-403d-a58f-bbd0e1df745d",
+        "description": "description 64"
+      }
+    ]
+  }
+}
